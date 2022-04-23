@@ -5,7 +5,7 @@
   description: Rewrites all Terraform configuration files to a canonical format
   entry: hooks/terraform-fmt.sh
   language: script
-  files: \.tf$
+  files: \.(tf|tfvars)$
   exclude: >
     (?x)^(
       .+\.terraform\/.*$|
