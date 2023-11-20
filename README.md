@@ -1,5 +1,3 @@
-[![Maintained by Gruntwork.io](https://img.shields.io/badge/maintained%20by-gruntwork.io-%235849a6.svg)](https://gruntwork.io/?ref=repo_pre-commit)
-
 # Pre-commit hooks
 
 This repo defines Git pre-commit hooks intended for use with [pre-commit](http://pre-commit.com/). The currently
@@ -190,4 +188,4 @@ pre-commit run
 
 This code is released under the Apache 2.0 License. Please see [LICENSE](LICENSE) and [NOTICE](NOTICE) for more details.
 
-Copyright &copy; 2019 Gruntwork, Inc.
+Originally forked from [gruntwork-io/pre-commit](https://github.com/gruntwork-io/pre-commit)
