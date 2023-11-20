@@ -36,7 +36,11 @@
   entry: hooks/tflint.sh
   language: script
   files: \.tf$
-  exclude: \.+.terraform\/.*$
+  exclude: >
+    (?x)^(
+      .+\.terraform\/.*$|
+      .+\.terragrunt-cache\/.*$|
+    )$
 
 - id: terragrunt-hclfmt
   name: Terragrunt hclfmt
