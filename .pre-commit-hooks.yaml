@@ -81,7 +81,6 @@
   description: golangci-lint is a Go linters aggregator
   entry: hooks/golangci-lint.sh
   language: script
-  language: script
   files: \.go$
   require_serial: true
 
