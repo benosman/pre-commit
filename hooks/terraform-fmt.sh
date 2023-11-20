@@ -12,7 +12,7 @@ FMT_ERROR=0
 
 for file in "$@"; do
   pushd "$(dirname "$file")" >/dev/null
-  terraform fmt -diff -check -write "$(basename "$file")" || FMT_ERROR=$((FMT_ERROR + $?))
+  terraform fmt -write=true "$(basename "$file")" || FMT_ERROR=$((FMT_ERROR + $?))
   popd >/dev/null
 done
 
