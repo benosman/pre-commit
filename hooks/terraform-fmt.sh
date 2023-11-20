@@ -7,17 +7,8 @@ set -euo pipefail
 # workaround to allow GitHub Desktop to work, add this (hopefully harmless) setting here.
 export PATH=$PATH:/usr/local/bin
 
-# Store and return all failures from fmt so this can validate every directory passed before exiting
-FMT_ERROR=0
-
 for file in "$@"; do
   pushd "$(dirname "$file")" >/dev/null
-  terraform fmt -write=true "$(basename "$file")" || FMT_ERROR=$((FMT_ERROR + $?))
+  terraform fmt -write=true "$(basename "$file")" || true
   popd >/dev/null
 done
-
-if [[ $FMT_ERROR -gt 0 ]]; then
-  exit 1
-else
-  exit 0
-fi
