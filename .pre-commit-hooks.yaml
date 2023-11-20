@@ -15,7 +15,11 @@
   entry: hooks/terraform-validate.sh
   language: script
   files: \.tf$
-  exclude: \.+.terraform\/.*$
+  exclude: >
+    (?x)^(
+      .+\.terraform\/.*$|
+      .+\.terragrunt-cache\/.*$|
+    )$
   require_serial: true
 
 - id: packer-validate
